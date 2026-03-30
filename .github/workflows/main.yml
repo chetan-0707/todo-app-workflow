@@ -1,0 +1,28 @@
+name: Test and Build
+on: 
+  push:
+    branches:
+      -main
+  pull_request:
+    branches:
+      -main
+
+jobs:
+  lint-and-typecheck:
+    runs-on: windows-latest
+    steps:
+      - name : Checkout Code
+        uses : actions/checkout@v4
+
+      - name : Use Node.js
+        uses : actions/setup-node@v4
+        with :
+          node-version : 22
+
+      - name : Install Dependencies
+        uses : npm ci
+
+      - name : Run Lint
+        uses : npm run lint
+        
+

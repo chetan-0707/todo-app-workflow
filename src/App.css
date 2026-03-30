@@ -1,0 +1,46 @@
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  list-style: none;
+}
+
+/* Status Colors */
+.pending {
+  color: orange;
+}
+
+.completed {
+  color: green;
+  text-decoration: line-through;
+}
+
+.closed {
+  color: red;
+}
+
+.buttons button {
+  margin-left: 5px;
+}
